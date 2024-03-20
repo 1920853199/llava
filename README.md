@@ -1,3 +1,8 @@
+预装镜像：
+```
+ubuntu22.04-cuda12.1.0-py310-torch2.1.2-tf2.14.0-1.13.1
+```
+
 ## 第一步：
 ```
 git clone https://github.com/haotian-liu/LLaVA.git
