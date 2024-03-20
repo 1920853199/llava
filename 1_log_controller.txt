@@ -1,0 +1,8 @@
+2024-03-20 22:41:13 | INFO | controller | args: Namespace(host='0.0.0.0', port=10000, dispatch_method='shortest_queue')
+2024-03-20 22:41:13 | INFO | controller | Init controller
+2024-03-20 22:41:13 | ERROR | stderr | INFO:     Started server process [753]
+2024-03-20 22:41:13 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-03-20 22:41:13 | ERROR | stderr | INFO:     Application startup complete.
+2024-03-20 22:41:13 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2024-03-20 22:43:17 | INFO | stdout | INFO:     127.0.0.1:60786 - "POST /refresh_all_workers HTTP/1.1" 200 OK
+2024-03-20 22:43:17 | INFO | stdout | INFO:     127.0.0.1:60790 - "POST /list_models HTTP/1.1" 200 OK

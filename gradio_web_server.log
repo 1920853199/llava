@@ -1,0 +1,15 @@
+2024-03-20 22:43:17 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=None, controller_url='http://localhost:10000', concurrency_count=16, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-03-20 22:43:17 | INFO | gradio_web_server | Models: []
+2024-03-20 22:43:17 | INFO | gradio_web_server | Namespace(host='0.0.0.0', port=None, controller_url='http://localhost:10000', concurrency_count=16, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-03-20 22:43:17 | ERROR | stderr | /opt/conda/envs/llava/lib/python3.10/site-packages/gradio/components/dropdown.py:163: UserWarning: The value passed into gr.Dropdown() is not in the list of choices. Please update the list of choices to include:  or set allow_custom_value=True.
+2024-03-20 22:43:17 | ERROR | stderr |   warnings.warn(
+2024-03-20 22:43:17 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-03-20 22:43:17 | INFO | httpx | HTTP Request: GET http://localhost:7860/startup-events "HTTP/1.1 200 OK"
+2024-03-20 22:43:17 | INFO | httpx | HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+2024-03-20 22:43:17 | INFO | stdout | 
+2024-03-20 22:43:17 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-03-20 22:43:17 | INFO | httpx | HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+2024-03-20 22:43:17 | INFO | httpx | HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+2024-03-20 22:43:18 | INFO | httpx | HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-03-20 22:43:18 | INFO | httpx | HTTP Request: POST https://api.gradio.app/gradio-initiated-analytics/ "HTTP/1.1 200 OK"
+2024-03-20 22:43:18 | INFO | httpx | HTTP Request: POST https://api.gradio.app/gradio-launched-telemetry/ "HTTP/1.1 200 OK"

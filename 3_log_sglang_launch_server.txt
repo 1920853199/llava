@@ -1,0 +1,15 @@
+nohup: 无法运行命令 'CUDA_VISIBLE_DEVICES=0': 没有那个文件或目录
+nohup: 无法运行命令 'CUDA_VISIBLE_DEVICES=0': 没有那个文件或目录
+You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers
+Traceback (most recent call last):
+  File "/opt/conda/envs/llava/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/llava/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/envs/llava/lib/python3.10/site-packages/sglang/launch_server.py", line 11, in <module>
+    launch_server(server_args, None)
+  File "/opt/conda/envs/llava/lib/python3.10/site-packages/sglang/srt/server.py", line 470, in launch_server
+    tokenizer_manager = TokenizerManager(server_args, port_args)
+  File "/opt/conda/envs/llava/lib/python3.10/site-packages/sglang/srt/managers/tokenizer_manager.py", line 107, in __init__
+    self.tokenizer = self.processor.tokenizer
+AttributeError: 'LlamaTokenizerFast' object has no attribute 'tokenizer'. Did you mean: '_tokenizer'?

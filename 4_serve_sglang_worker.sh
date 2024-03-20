@@ -1,0 +1,1 @@
+nohup python -m llava.serve.sglang_worker --host 0.0.0.0 --controller http://localhost:10000 --port 40000 --worker http://localhost:40000 --sgl-endpoint http://127.0.0.1:30000 >> 4_log_serve_sglang_worker.txt 2>&1 &

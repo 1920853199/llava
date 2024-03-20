@@ -1,0 +1,112 @@
+2024-03-20 23:09:12 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=40000, worker_address='http://localhost:40000', controller_address='http://localhost:10000', model_path='/mnt/workspace/llava/models/AI-ModelScope/llava-v1___6-34b', model_base=None, model_name=None, device='cuda', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False, use_flash_attn=False)
+2024-03-20 23:09:12 | INFO | model_worker | Loading the model llava-v1___6-34b on worker e052cd ...
+You are using a model of type llava to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+2024-03-20 23:09:22 | ERROR | stderr | Traceback (most recent call last):
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+2024-03-20 23:09:22 | ERROR | stderr |     sock = connection.create_connection(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+2024-03-20 23:09:22 | ERROR | stderr |     raise err
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+2024-03-20 23:09:22 | ERROR | stderr |     sock.connect(sa)
+2024-03-20 23:09:22 | ERROR | stderr | OSError: [Errno 101] Network is unreachable
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | Traceback (most recent call last):
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+2024-03-20 23:09:22 | ERROR | stderr |     response = self._make_request(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+2024-03-20 23:09:22 | ERROR | stderr |     raise new_e
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+2024-03-20 23:09:22 | ERROR | stderr |     self._validate_conn(conn)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+2024-03-20 23:09:22 | ERROR | stderr |     conn.connect()
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connection.py", line 616, in connect
+2024-03-20 23:09:22 | ERROR | stderr |     self.sock = sock = self._new_conn()
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+2024-03-20 23:09:22 | ERROR | stderr |     raise NewConnectionError(
+2024-03-20 23:09:22 | ERROR | stderr | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fbd8b75a650>: Failed to establish a new connection: [Errno 101] Network is unreachable
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | Traceback (most recent call last):
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+2024-03-20 23:09:22 | ERROR | stderr |     resp = conn.urlopen(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+2024-03-20 23:09:22 | ERROR | stderr |     retries = retries.increment(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+2024-03-20 23:09:22 | ERROR | stderr |     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2024-03-20 23:09:22 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /openai/clip-vit-large-patch14-336/resolve/main/preprocessor_config.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbd8b75a650>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | Traceback (most recent call last):
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1261, in hf_hub_download
+2024-03-20 23:09:22 | ERROR | stderr |     metadata = get_hf_file_metadata(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2024-03-20 23:09:22 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1667, in get_hf_file_metadata
+2024-03-20 23:09:22 | ERROR | stderr |     r = _request_wrapper(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 385, in _request_wrapper
+2024-03-20 23:09:22 | ERROR | stderr |     response = _request_wrapper(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 408, in _request_wrapper
+2024-03-20 23:09:22 | ERROR | stderr |     response = get_session().request(method=method, url=url, **params)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+2024-03-20 23:09:22 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+2024-03-20 23:09:22 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 67, in send
+2024-03-20 23:09:22 | ERROR | stderr |     return super().send(request, *args, **kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+2024-03-20 23:09:22 | ERROR | stderr |     raise ConnectionError(e, request=request)
+2024-03-20 23:09:22 | ERROR | stderr | requests.exceptions.ConnectionError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /openai/clip-vit-large-patch14-336/resolve/main/preprocessor_config.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbd8b75a650>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: c6be5b3a-40f6-4357-93f1-a62953dbc62e)')
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | Traceback (most recent call last):
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+2024-03-20 23:09:22 | ERROR | stderr |     resolved_file = hf_hub_download(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2024-03-20 23:09:22 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1406, in hf_hub_download
+2024-03-20 23:09:22 | ERROR | stderr |     raise LocalEntryNotFoundError(
+2024-03-20 23:09:22 | ERROR | stderr | huggingface_hub.utils._errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-20 23:09:22 | ERROR | stderr | 
+2024-03-20 23:09:22 | ERROR | stderr | Traceback (most recent call last):
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-03-20 23:09:22 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/runpy.py", line 86, in _run_code
+2024-03-20 23:09:22 | ERROR | stderr |     exec(code, run_globals)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/serve/model_worker.py", line 277, in <module>
+2024-03-20 23:09:22 | ERROR | stderr |     worker = ModelWorker(args.controller_address,
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/serve/model_worker.py", line 65, in __init__
+2024-03-20 23:09:22 | ERROR | stderr |     self.tokenizer, self.model, self.image_processor, self.context_len = load_pretrained_model(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/builder.py", line 117, in load_pretrained_model
+2024-03-20 23:09:22 | ERROR | stderr |     model = LlavaLlamaForCausalLM.from_pretrained(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3375, in from_pretrained
+2024-03-20 23:09:22 | ERROR | stderr |     model = cls(config, *model_args, **model_kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/language_model/llava_llama.py", line 46, in __init__
+2024-03-20 23:09:22 | ERROR | stderr |     self.model = LlavaLlamaModel(config)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/language_model/llava_llama.py", line 38, in __init__
+2024-03-20 23:09:22 | ERROR | stderr |     super(LlavaLlamaModel, self).__init__(config)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/llava_arch.py", line 35, in __init__
+2024-03-20 23:09:22 | ERROR | stderr |     self.vision_tower = build_vision_tower(config, delay_load=True)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/multimodal_encoder/builder.py", line 9, in build_vision_tower
+2024-03-20 23:09:22 | ERROR | stderr |     return CLIPVisionTower(vision_tower, args=vision_tower_cfg, **kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/multimodal_encoder/clip_encoder.py", line 20, in __init__
+2024-03-20 23:09:22 | ERROR | stderr |     self.load_model()
+2024-03-20 23:09:22 | ERROR | stderr |   File "/mnt/workspace/llava/LLaVA/llava/model/multimodal_encoder/clip_encoder.py", line 29, in load_model
+2024-03-20 23:09:22 | ERROR | stderr |     self.image_processor = CLIPImageProcessor.from_pretrained(self.vision_tower_name)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/image_processing_utils.py", line 205, in from_pretrained
+2024-03-20 23:09:22 | ERROR | stderr |     image_processor_dict, kwargs = cls.get_image_processor_dict(pretrained_model_name_or_path, **kwargs)
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/image_processing_utils.py", line 334, in get_image_processor_dict
+2024-03-20 23:09:22 | ERROR | stderr |     resolved_image_processor_file = cached_file(
+2024-03-20 23:09:22 | ERROR | stderr |   File "/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/utils/hub.py", line 441, in cached_file
+2024-03-20 23:09:22 | ERROR | stderr |     raise EnvironmentError(
+2024-03-20 23:09:22 | ERROR | stderr | OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like openai/clip-vit-large-patch14-336 is not the path to a directory containing a file named preprocessor_config.json.
+2024-03-20 23:09:22 | ERROR | stderr | Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+2024-03-20 23:10:07 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=40000, worker_address='http://localhost:40000', controller_address='http://localhost:10000', model_path='/mnt/workspace/llava/models/AI-ModelScope/llava-v1___6-34b', model_base=None, model_name=None, device='cuda', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False, use_flash_attn=False)
+2024-03-20 23:10:07 | INFO | model_worker | Loading the model llava-v1___6-34b on worker ca2cac ...
+You are using a model of type llava to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
